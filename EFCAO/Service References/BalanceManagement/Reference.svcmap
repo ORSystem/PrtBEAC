@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d458417b-035d-465d-b2e9-579e34673a0d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/BalanceManagement?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BalanceManagement.xsd" MetadataType="Schema" ID="12a742f8-1332-43dd-922b-9b558ab028f9" SourceId="1" SourceUrl="http://localhost:8081/BalanceManagement?xsd=xsd5" />
+    <MetadataFile FileName="BalanceManagement1.xsd" MetadataType="Schema" ID="71a2b5b4-57c9-447d-af76-33c49a1244e0" SourceId="1" SourceUrl="http://localhost:8081/BalanceManagement?xsd=xsd1" />
+    <MetadataFile FileName="BalanceManagement2.xsd" MetadataType="Schema" ID="7c8f8f90-5435-4e6e-a936-eb68a6f16535" SourceId="1" SourceUrl="http://localhost:8081/BalanceManagement?xsd=xsd3" />
+    <MetadataFile FileName="BalanceManagement3.xsd" MetadataType="Schema" ID="4de6167c-5fb8-4fe3-a32d-0ac92b1a1db2" SourceId="1" SourceUrl="http://localhost:8081/BalanceManagement?xsd=xsd4" />
+    <MetadataFile FileName="BalanceManagement.wsdl" MetadataType="Wsdl" ID="35cf5eaa-7f0e-4fcf-ab6e-867dcb158b62" SourceId="1" SourceUrl="http://localhost:8081/BalanceManagement?wsdl" />
+    <MetadataFile FileName="BalanceManagement4.xsd" MetadataType="Schema" ID="5b278e3e-fdcf-48ad-b4fe-83ce8ab2d09a" SourceId="1" SourceUrl="http://localhost:8081/BalanceManagement?xsd=xsd0" />
+    <MetadataFile FileName="BalanceManagement5.xsd" MetadataType="Schema" ID="58aa181c-2939-431d-97dc-de595133697d" SourceId="1" SourceUrl="http://localhost:8081/BalanceManagement?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

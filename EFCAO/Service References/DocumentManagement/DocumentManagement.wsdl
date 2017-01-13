@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocumentManagement" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8081/DocumentManagement?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8081/DocumentManagement?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:8081/DocumentManagement?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8081/DocumentManagement?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:8081/DocumentManagement?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Anadefi" />
+      <xsd:import schemaLocation="http://localhost:8081/DocumentManagement?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentManagement_DocumentGetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetList" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetList_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetList_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetListForBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetListForBalance" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetListForBalance_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetListForBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetListForBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetListForBalance_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetTemplate_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetTemplate_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetParams" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetParams_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetParams_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetData_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetData_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetDocument_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGetDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentManagement_DocumentGetDocument_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentManagement">
+    <wsdl:operation name="DocumentGetList">
+      <wsdl:input wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetList" message="tns:IDocumentManagement_DocumentGetList_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetListResponse" message="tns:IDocumentManagement_DocumentGetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetListForBalance">
+      <wsdl:input wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetListForBalance" message="tns:IDocumentManagement_DocumentGetListForBalance_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetListForBalanceResponse" message="tns:IDocumentManagement_DocumentGetListForBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetTemplate">
+      <wsdl:input wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetTemplate" message="tns:IDocumentManagement_DocumentGetTemplate_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetTemplateResponse" message="tns:IDocumentManagement_DocumentGetTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetParams">
+      <wsdl:input wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetParams" message="tns:IDocumentManagement_DocumentGetParams_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetParamsResponse" message="tns:IDocumentManagement_DocumentGetParams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetData">
+      <wsdl:input wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetData" message="tns:IDocumentManagement_DocumentGetData_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetDataResponse" message="tns:IDocumentManagement_DocumentGetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetDocument">
+      <wsdl:input wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetDocument" message="tns:IDocumentManagement_DocumentGetDocument_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IDocumentManagement/DocumentGetDocumentResponse" message="tns:IDocumentManagement_DocumentGetDocument_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDocumentManagement" type="tns:IDocumentManagement">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DocumentGetList">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagement/DocumentGetList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IDocumentManagement_DocumentGetList_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IDocumentManagement_DocumentGetList_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetListForBalance">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagement/DocumentGetListForBalance" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IDocumentManagement_DocumentGetListForBalance_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IDocumentManagement_DocumentGetListForBalance_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetTemplate">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagement/DocumentGetTemplate" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IDocumentManagement_DocumentGetTemplate_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IDocumentManagement_DocumentGetTemplate_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetParams">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagement/DocumentGetParams" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IDocumentManagement_DocumentGetParams_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IDocumentManagement_DocumentGetParams_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetData">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagement/DocumentGetData" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IDocumentManagement_DocumentGetData_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IDocumentManagement_DocumentGetData_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGetDocument">
+      <soap:operation soapAction="http://tempuri.org/IDocumentManagement/DocumentGetDocument" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IDocumentManagement_DocumentGetDocument_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IDocumentManagement_DocumentGetDocument_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentManagement">
+    <wsdl:port name="BasicHttpBinding_IDocumentManagement" binding="tns:BasicHttpBinding_IDocumentManagement">
+      <soap:address location="http://localhost:8081/DocumentManagement" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

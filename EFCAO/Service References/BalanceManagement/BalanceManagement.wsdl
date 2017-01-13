@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BalanceManagement" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8081/BalanceManagement?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8081/BalanceManagement?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:8081/BalanceManagement?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8081/BalanceManagement?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:8081/BalanceManagement?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Anadefi" />
+      <xsd:import schemaLocation="http://localhost:8081/BalanceManagement?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBalanceManagement_BalanceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:BalanceList" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceList_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BalanceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceList_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:BalanceCreate" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceCreate_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BalanceCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceCreate_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceGetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:BalanceGetData" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceGetData_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceGetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BalanceGetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceGetData_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceSetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:BalanceSetData" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceSetData_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceSetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BalanceSetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBalanceManagement_BalanceSetData_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="IBalanceManagement">
+    <wsdl:operation name="BalanceList">
+      <wsdl:input wsam:Action="http://tempuri.org/IBalanceManagement/BalanceList" message="tns:IBalanceManagement_BalanceList_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IBalanceManagement/BalanceListResponse" message="tns:IBalanceManagement_BalanceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BalanceCreate">
+      <wsdl:input wsam:Action="http://tempuri.org/IBalanceManagement/BalanceCreate" message="tns:IBalanceManagement_BalanceCreate_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IBalanceManagement/BalanceCreateResponse" message="tns:IBalanceManagement_BalanceCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BalanceGetData">
+      <wsdl:input wsam:Action="http://tempuri.org/IBalanceManagement/BalanceGetData" message="tns:IBalanceManagement_BalanceGetData_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IBalanceManagement/BalanceGetDataResponse" message="tns:IBalanceManagement_BalanceGetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BalanceSetData">
+      <wsdl:input wsam:Action="http://tempuri.org/IBalanceManagement/BalanceSetData" message="tns:IBalanceManagement_BalanceSetData_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IBalanceManagement/BalanceSetDataResponse" message="tns:IBalanceManagement_BalanceSetData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBalanceManagement" type="tns:IBalanceManagement">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BalanceList">
+      <soap:operation soapAction="http://tempuri.org/IBalanceManagement/BalanceList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IBalanceManagement_BalanceList_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IBalanceManagement_BalanceList_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceCreate">
+      <soap:operation soapAction="http://tempuri.org/IBalanceManagement/BalanceCreate" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IBalanceManagement_BalanceCreate_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IBalanceManagement_BalanceCreate_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceGetData">
+      <soap:operation soapAction="http://tempuri.org/IBalanceManagement/BalanceGetData" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IBalanceManagement_BalanceGetData_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IBalanceManagement_BalanceGetData_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceSetData">
+      <soap:operation soapAction="http://tempuri.org/IBalanceManagement/BalanceSetData" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IBalanceManagement_BalanceSetData_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IBalanceManagement_BalanceSetData_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BalanceManagement">
+    <wsdl:port name="BasicHttpBinding_IBalanceManagement" binding="tns:BasicHttpBinding_IBalanceManagement">
+      <soap:address location="http://localhost:8081/BalanceManagement" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

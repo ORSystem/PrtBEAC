@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8da6f38a-ddd9-46b6-8a6b-b2859d0e4fa3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/CompanyManagement?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CompanyManagement.xsd" MetadataType="Schema" ID="6104e09d-d4c6-45c5-b4f2-84ab923848f7" SourceId="1" SourceUrl="http://localhost:8081/CompanyManagement?xsd=xsd2" />
+    <MetadataFile FileName="CompanyManagement1.xsd" MetadataType="Schema" ID="3cb4edf4-a01f-4a0e-a004-b304481722d5" SourceId="1" SourceUrl="http://localhost:8081/CompanyManagement?xsd=xsd3" />
+    <MetadataFile FileName="CompanyManagement.wsdl" MetadataType="Wsdl" ID="1dc61ac5-b8df-4dec-93b6-42fc0f994d00" SourceId="1" SourceUrl="http://localhost:8081/CompanyManagement?wsdl" />
+    <MetadataFile FileName="CompanyManagement2.xsd" MetadataType="Schema" ID="94c9c41e-dd4e-48c0-a535-40326bbf97f8" SourceId="1" SourceUrl="http://localhost:8081/CompanyManagement?xsd=xsd1" />
+    <MetadataFile FileName="CompanyManagement3.xsd" MetadataType="Schema" ID="8a02d5cb-2f92-48fe-b8b0-bd41cf09aed8" SourceId="1" SourceUrl="http://localhost:8081/CompanyManagement?xsd=xsd5" />
+    <MetadataFile FileName="CompanyManagement4.xsd" MetadataType="Schema" ID="5aec825d-5a63-4706-8489-36f1d617375c" SourceId="1" SourceUrl="http://localhost:8081/CompanyManagement?xsd=xsd0" />
+    <MetadataFile FileName="CompanyManagement5.xsd" MetadataType="Schema" ID="f0a99ea9-ee91-4efe-8080-d01048e013fa" SourceId="1" SourceUrl="http://localhost:8081/CompanyManagement?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

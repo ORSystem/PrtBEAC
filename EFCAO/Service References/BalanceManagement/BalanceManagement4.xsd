@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8081/BalanceManagement?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Anadefi" />
+  <xs:import schemaLocation="http://localhost:8081/BalanceManagement?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="BalanceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="modelName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="type" type="xs:unsignedShort" />
+        <xs:element minOccurs="0" name="max" type="xs:unsignedShort" />
+        <xs:element minOccurs="0" name="reverse" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BalanceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="BalanceListResult" nillable="true" type="q1:ArrayOfAdes.BalanceSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BalanceCreate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="modelName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="type" type="xs:unsignedShort" />
+        <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BalanceCreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="BalanceCreateResult" nillable="true" type="q2:Ades.BalanceSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BalanceGetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="balanceKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="propertyList" nillable="true" type="q3:ArrayOfstring" />
+        <xs:element minOccurs="0" name="raw" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BalanceGetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="BalanceGetDataResult" nillable="true" type="q4:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BalanceSetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="balanceKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="properties" nillable="true" type="q5:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BalanceSetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BalanceSetDataResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

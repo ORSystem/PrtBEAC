@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bfb56621-fa3b-4292-b260-0dd2e36ff188" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/DocumentManagement?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DocumentManagement.xsd" MetadataType="Schema" ID="8b0b4d45-14d7-44a8-8902-ea2b1d964e64" SourceId="1" SourceUrl="http://localhost:8081/DocumentManagement?xsd=xsd5" />
+    <MetadataFile FileName="DocumentManagement1.xsd" MetadataType="Schema" ID="85bb5419-1d8c-4d31-b77a-518fbc09585b" SourceId="1" SourceUrl="http://localhost:8081/DocumentManagement?xsd=xsd4" />
+    <MetadataFile FileName="DocumentManagement2.xsd" MetadataType="Schema" ID="c54cdb67-c15d-41c6-896b-e3b0006c33dd" SourceId="1" SourceUrl="http://localhost:8081/DocumentManagement?xsd=xsd3" />
+    <MetadataFile FileName="DocumentManagement3.xsd" MetadataType="Schema" ID="97b67301-e81b-472c-8653-f06010570327" SourceId="1" SourceUrl="http://localhost:8081/DocumentManagement?xsd=xsd2" />
+    <MetadataFile FileName="DocumentManagement4.xsd" MetadataType="Schema" ID="053b17b7-2846-4058-95aa-08e0949ae3b5" SourceId="1" SourceUrl="http://localhost:8081/DocumentManagement?xsd=xsd1" />
+    <MetadataFile FileName="DocumentManagement5.xsd" MetadataType="Schema" ID="d3a7da59-7941-4c5c-9cc4-18791544d4b6" SourceId="1" SourceUrl="http://localhost:8081/DocumentManagement?xsd=xsd0" />
+    <MetadataFile FileName="DocumentManagement.wsdl" MetadataType="Wsdl" ID="c6cb88af-5ad9-4f85-89a3-abd977656a2b" SourceId="1" SourceUrl="http://localhost:8081/DocumentManagement?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

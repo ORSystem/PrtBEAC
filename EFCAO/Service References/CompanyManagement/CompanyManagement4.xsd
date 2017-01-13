@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8081/CompanyManagement?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Anadefi" />
+  <xs:import schemaLocation="http://localhost:8081/CompanyManagement?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="CompanySearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchArgument" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanySearchResult" nillable="true" type="q1:ArrayOfAdes.CompanySummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyKeyFromIdent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyIdent" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyKeyFromIdentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyKeyFromIdentResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyQueryStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyIdent" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyQueryStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyQueryStatusResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyExtractCSV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="selection" nillable="true" type="q2:ArrayOfstring" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="extraction" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyExtractCSVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CompanyExtractCSVResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyCreate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="summary" nillable="true" type="q5:Ades.CompanySummary" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="properties" nillable="true" type="q6:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyCreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyCreateResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyDeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="propertyList" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanyGetPropertiesResult" nillable="true" type="q8:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="properties" nillable="true" type="q9:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySetPropertiesResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetExtra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="propertyList" nillable="true" type="q10:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetExtraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanyGetExtraResult" nillable="true" type="q11:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetExtra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="properties" nillable="true" type="q12:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetExtraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySetExtraResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetIdentifiers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="identList" nillable="true" type="q13:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetIdentifiersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanyGetIdentifiersResult" nillable="true" type="q14:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetIdentifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="identCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="identValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetIdentifierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySetIdentifierResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetRatings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rateList" nillable="true" type="q15:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetRatingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanyGetRatingsResult" nillable="true" type="q16:ArrayOfAdes.Rating" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetRating">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="ratingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ratingDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ratingValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetRatingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySetRatingResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetManagers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetManagersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanyGetManagersResult" nillable="true" type="q17:ArrayOfAdes.Manager" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyQuickAddManager">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="function" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="birthDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyQuickAddManagerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyQuickAddManagerResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetManagerProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="managerKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="propertyList" nillable="true" type="q18:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetManagerPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanyGetManagerPropertiesResult" nillable="true" type="q19:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetManagerProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="managerKey" type="xs:unsignedLong" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="properties" nillable="true" type="q20:ArrayOfAdes.Property" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySetManagerPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySetManagerPropertiesResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyDeleteManager">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="managerKey" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyDeleteManagerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyDeleteManagerResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetStockholders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetStockholdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanyGetStockholdersResult" nillable="true" type="q21:ArrayOfAdes.Stockholder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyQuickAddStockholder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="ident" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shares" nillable="true" type="xs:unsignedShort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyQuickAddStockholderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyQuickAddStockholderResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetGroupMembers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="year" nillable="true" type="xs:unsignedShort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyGetGroupMembersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Anadefi" minOccurs="0" name="CompanyGetGroupMembersResult" nillable="true" type="q22:ArrayOfAdes.GroupMember" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyQuickAddGroupMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="memberIdent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="memberName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="participation" nillable="true" type="xs:unsignedShort" />
+        <xs:element minOccurs="0" name="year" nillable="true" type="xs:unsignedShort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyQuickAddGroupMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyQuickAddGroupMemberResult" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

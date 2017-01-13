@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Anadefi" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Anadefi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAdes.CompanySummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ades.CompanySummary" nillable="true" type="tns:Ades.CompanySummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdes.CompanySummary" nillable="true" type="tns:ArrayOfAdes.CompanySummary" />
+  <xs:complexType name="Ades.CompanySummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="lockType" type="xs:short" />
+      <xs:element minOccurs="0" name="mainId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ades.CompanySummary" nillable="true" type="tns:Ades.CompanySummary" />
+  <xs:complexType name="ArrayOfAdes.Property">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ades.Property" nillable="true" type="tns:Ades.Property" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdes.Property" nillable="true" type="tns:ArrayOfAdes.Property" />
+  <xs:complexType name="Ades.Property">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ades.Property" nillable="true" type="tns:Ades.Property" />
+  <xs:complexType name="ArrayOfAdes.Rating">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ades.Rating" nillable="true" type="tns:Ades.Rating" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdes.Rating" nillable="true" type="tns:ArrayOfAdes.Rating" />
+  <xs:complexType name="Ades.Rating">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ades.Rating" nillable="true" type="tns:Ades.Rating" />
+  <xs:complexType name="ArrayOfAdes.Manager">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ades.Manager" nillable="true" type="tns:Ades.Manager" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdes.Manager" nillable="true" type="tns:ArrayOfAdes.Manager" />
+  <xs:complexType name="Ades.Manager">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="birthDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="function" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="key" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ades.Manager" nillable="true" type="tns:Ades.Manager" />
+  <xs:complexType name="ArrayOfAdes.Stockholder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ades.Stockholder" nillable="true" type="tns:Ades.Stockholder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdes.Stockholder" nillable="true" type="tns:ArrayOfAdes.Stockholder" />
+  <xs:complexType name="Ades.Stockholder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="mainId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="shares" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ades.Stockholder" nillable="true" type="tns:Ades.Stockholder" />
+  <xs:complexType name="ArrayOfAdes.GroupMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ades.GroupMember" nillable="true" type="tns:Ades.GroupMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdes.GroupMember" nillable="true" type="tns:ArrayOfAdes.GroupMember" />
+  <xs:complexType name="Ades.GroupMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyKey" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="key" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="mainId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="participation" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="relationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="year" nillable="true" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ades.GroupMember" nillable="true" type="tns:Ades.GroupMember" />
+</xs:schema>

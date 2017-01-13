@@ -1,0 +1,149 @@
+﻿#--------------------------------------------------------------------
+# Etats financiers conforme aux originaux Traduction
+#-------------------------------------------------------------------
+
+
+# EFCAO Label
+#--------------------------------------------------------------------
+LblEfcaoTitle=Financial Statements conform to original
+LblEfcaoCompTitle=Companies
+LblEfcaoExercies=Exercises :
+LblEfcaoExerModel=Exercises Models
+LblEfcaoModTitle=Models
+LblEfcaoMod=Models :
+LblEfcaoDocSaisie=Input documents (saisie)
+LblEfcaoModeleSaisie=, Input Model (saisie)
+LblEfcaoDocAnalyse=Analysis documents
+LblEfcaoModeleAnalyse=, Analysis Model
+LblCompExcericesTitle=List of available 3 last exercises
+LblContinue=Continue
+
+# Efcao Recherch
+#------------------------------------------------------------------
+LblSearchComp=Search companies :
+LkBttnSearchComp=Search
+
+
+# Efcao Model Error
+#-------------------------------------------------------------------
+lblErrorTitle=Error
+BttnErrorClose=Close
+
+# Efcao Model loading
+#-------------------------------------------------------------------
+LblLoadingTitle=Loading
+
+# Efcao Model Avertissement
+#------------------------------------------------------------------
+lblAvertisTitle=Warning
+BttnAvertisClose=Close
+
+# Efcao Model Success
+#----------------------------------------------------------------
+LblSuccessTitle=Success
+BttnSuccessClose=Close
+
+
+# EFCAO Buttons
+# ---------------------------------
+BttnRetourComp=Companies
+BttnGetProdDoc=Get documents
+BttnSelectAll=Select all
+BttnUnSelectAll=Deselect all
+BttnOk=Ok
+BttnAnnuler=Cancel
+BttnDownLoad=Download
+BttnExerciesClose=Fermer
+BttnModeAvance=Advanced mode
+BttnNewSearch=New search
+
+
+# EFCAO Messges
+# --------------------------------
+MesgEfcao01=Exercises models for
+MesgEfcao02=Input documents (saisie) for
+MesgEfcao03=Analysis documents for
+MesgEfcao04=The searched company does not exist.
+MesgEfcao05=No exercies in the data base.
+MesgEfcao06=The maximum number of exercises to be selected is 5.
+MesgEfcao07=The input documents (Saisie)is empty.
+MesgEfcao08=The Analysis document list is empty.
+MesgEfcao09=The input documents (Saisie) and Analysis document list are empty.
+MesgEfcao10=The product 
+MesgEfcao11=was registered, Pdf document was created.
+MesgEfcao12=the new document pdf was created.
+MesgEfcao13=Please select at least on document.
+MesgEfcao14=The product and the user id are missing.
+MesgEfcao15=Warning ! If you click OK, the order will be processed and billed. ?
+MesgEfcao16=Error adding consumption !
+MesgEfcao17=XML : Error creating xml document !
+MesgEfcao18=, already ordered !
+MesgEfcao19=The Ades Server is not started !
+MesgEfcao20=The web service is not connected !
+MesgEfcao21=The web service is not connected .. / Unable to connect to the remote server !.
+MesgEfcao22=The membership date is not valid ! 
+MesgEfcao23=Your membership does not have enough tokens !
+MesgDosSect24=No document of this product corresponds to the models of the company.
+
+# EFCAO Error
+# ------------------------------
+ErrEfcao1=Error loading Exercises list!.
+ErrEfcao2=Error loading Exercises Model list !. 
+ErrEfcao3=Error loading modle links !. 
+ErrEfcao4=Error loading products list !.
+ErrEfcao5=Error loading input documents (Saisie) !. 
+ErrEfcao6=Error loading analysis documents !. 
+ErrEfcao7=Error loading ADES documents list !. 
+ErrEfcao8=Error Search Company !.
+ErrEfcao9=EDW : Error loading ADES Edw documents list !.
+ErrEfcao10=XML public : Error creating document xml !.
+ErrEfcao11=PDF public : Error creating document PDf !.
+ErrEfcao12=XML : Error creating document xml !.
+ErrEfcao13=PDF : Error creating document PDf !.
+ErrEfcao14=Error adding consumption !.
+ErrEfcao15=PDF : Error reading the page margin !.
+ErrEfcao16=PDF : Error reading the page size.
+ErrEfcao17=PDF : Error reading table !.
+ErrEfcao18=PDF : Error reading table position !.
+ErrEfcao19=PDF : Error reading table size !.
+ErrEfcao20=PDF : Error reading table cell spacing !.
+ErrEfcao21=PDF : Error reading table cell border !.
+ErrEfcao22=PDF : Error reading table cell image !.
+ErrEfcao23=PDF : Error reading fonts !.
+ErrEfcao24=PDF : Error reading fonts rotation !.
+ErrEfcao25=PDF : Error loading logo !.
+ErrEfcao26=Error loading user Consumption list !
+ErrEfcao27=Error loading company property !
+ErrEfcao28=Error checking the membership date !
+ErrEfcao29=Error checking remaining tokens !
+
+# Dossier Individual GridView Company
+# -------------------------------
+GridCompID=Company Key
+GridCompLock=lock Type
+GridCompNom=Name
+GridCompIdentifiant=Identifier
+GridCompModels=Models
+GridCompAction=Action
+
+# EFCAO GridView Exercies
+# -------------------------------
+GridExrciesType=Type
+GridExrciesLock=Locked
+GridExrciesDate=Date
+GridExrciesUnit=Unit
+GridExrciesCurrency=Currency
+GridExrciesDuration=Duration / Month
+GridExrciesModels=Models
+GridExrciesKey=Key
+
+# EFCAO GridView document
+# -------------------------------
+GridDocSelect=Select
+GridDocID=ID
+GridDocName=Document Name
+GridDocEdw=Edw
+
+
+
+#--------------------------------------------------------------------

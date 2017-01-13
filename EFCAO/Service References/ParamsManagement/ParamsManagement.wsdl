@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ParamsManagement" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8081/ParamsManagement?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8081/ParamsManagement?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:8081/ParamsManagement?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8081/ParamsManagement?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:8081/ParamsManagement?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Anadefi" />
+      <xsd:import schemaLocation="http://localhost:8081/ParamsManagement?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IParamsManagement_ModelGetNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetNames" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetNames_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetNames_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetLinks" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetLinks_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetLinks_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetMarkets_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetMarkets" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetMarkets_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetMarkets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetMarketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetMarkets_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetSections_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetSections" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetSections_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetSections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetSectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetSections_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetTemplate_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetTemplate_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetDocumentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetDocumentList" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetDocumentList_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetDocumentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModelGetDocumentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ModelGetDocumentList_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ParamGetNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParamGetNames" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ParamGetNames_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ParamGetNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParamGetNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ParamGetNames_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ParamGetPolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:ParamGetPolicy" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ParamGetPolicy_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ParamGetPolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ParamGetPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParamsManagement_ParamGetPolicy_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="IParamsManagement">
+    <wsdl:operation name="ModelGetNames">
+      <wsdl:input wsam:Action="http://tempuri.org/IParamsManagement/ModelGetNames" message="tns:IParamsManagement_ModelGetNames_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IParamsManagement/ModelGetNamesResponse" message="tns:IParamsManagement_ModelGetNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetLinks">
+      <wsdl:input wsam:Action="http://tempuri.org/IParamsManagement/ModelGetLinks" message="tns:IParamsManagement_ModelGetLinks_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IParamsManagement/ModelGetLinksResponse" message="tns:IParamsManagement_ModelGetLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetMarkets">
+      <wsdl:input wsam:Action="http://tempuri.org/IParamsManagement/ModelGetMarkets" message="tns:IParamsManagement_ModelGetMarkets_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IParamsManagement/ModelGetMarketsResponse" message="tns:IParamsManagement_ModelGetMarkets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetSections">
+      <wsdl:input wsam:Action="http://tempuri.org/IParamsManagement/ModelGetSections" message="tns:IParamsManagement_ModelGetSections_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IParamsManagement/ModelGetSectionsResponse" message="tns:IParamsManagement_ModelGetSections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetTemplate">
+      <wsdl:input wsam:Action="http://tempuri.org/IParamsManagement/ModelGetTemplate" message="tns:IParamsManagement_ModelGetTemplate_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IParamsManagement/ModelGetTemplateResponse" message="tns:IParamsManagement_ModelGetTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetDocumentList">
+      <wsdl:input wsam:Action="http://tempuri.org/IParamsManagement/ModelGetDocumentList" message="tns:IParamsManagement_ModelGetDocumentList_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IParamsManagement/ModelGetDocumentListResponse" message="tns:IParamsManagement_ModelGetDocumentList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParamGetNames">
+      <wsdl:input wsam:Action="http://tempuri.org/IParamsManagement/ParamGetNames" message="tns:IParamsManagement_ParamGetNames_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IParamsManagement/ParamGetNamesResponse" message="tns:IParamsManagement_ParamGetNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ParamGetPolicy">
+      <wsdl:input wsam:Action="http://tempuri.org/IParamsManagement/ParamGetPolicy" message="tns:IParamsManagement_ParamGetPolicy_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IParamsManagement/ParamGetPolicyResponse" message="tns:IParamsManagement_ParamGetPolicy_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IParamsManagement" type="tns:IParamsManagement">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ModelGetNames">
+      <soap:operation soapAction="http://tempuri.org/IParamsManagement/ModelGetNames" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IParamsManagement_ModelGetNames_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IParamsManagement_ModelGetNames_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetLinks">
+      <soap:operation soapAction="http://tempuri.org/IParamsManagement/ModelGetLinks" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IParamsManagement_ModelGetLinks_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IParamsManagement_ModelGetLinks_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetMarkets">
+      <soap:operation soapAction="http://tempuri.org/IParamsManagement/ModelGetMarkets" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IParamsManagement_ModelGetMarkets_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IParamsManagement_ModelGetMarkets_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetSections">
+      <soap:operation soapAction="http://tempuri.org/IParamsManagement/ModelGetSections" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IParamsManagement_ModelGetSections_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IParamsManagement_ModelGetSections_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetTemplate">
+      <soap:operation soapAction="http://tempuri.org/IParamsManagement/ModelGetTemplate" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IParamsManagement_ModelGetTemplate_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IParamsManagement_ModelGetTemplate_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModelGetDocumentList">
+      <soap:operation soapAction="http://tempuri.org/IParamsManagement/ModelGetDocumentList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IParamsManagement_ModelGetDocumentList_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IParamsManagement_ModelGetDocumentList_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParamGetNames">
+      <soap:operation soapAction="http://tempuri.org/IParamsManagement/ParamGetNames" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IParamsManagement_ParamGetNames_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IParamsManagement_ParamGetNames_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParamGetPolicy">
+      <soap:operation soapAction="http://tempuri.org/IParamsManagement/ParamGetPolicy" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IParamsManagement_ParamGetPolicy_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:IParamsManagement_ParamGetPolicy_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ParamsManagement">
+    <wsdl:port name="BasicHttpBinding_IParamsManagement" binding="tns:BasicHttpBinding_IParamsManagement">
+      <soap:address location="http://localhost:8081/ParamsManagement" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

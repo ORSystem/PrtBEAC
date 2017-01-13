@@ -1,0 +1,151 @@
+#--------------------------------------------------------------------
+# Etats financiers conforme aux originaux Traduction
+#--------------------------------------------------------------------
+
+
+# EFCAO Label
+#--------------------------------------------------------------------
+LblEfcaoTitle=Etats financiers conformes aux originaux
+LblEfcaoCompTitle=Sociétés
+LblEfcaoExercies=Exercices :
+LblEfcaoExerModel=Exercices Modèles
+LblEfcaoModTitle=Modèles
+LblEfcaoMod=Modèles :
+LblEfcaoDocSaisie=Documents de saisie
+LblEfcaoModeleSaisie=, modèle de saisie :
+LblEfcaoDocAnalyse=Documents d’analyse
+LblEfcaoModeleAnalyse=, modèle d’analyse :
+LblCompExcericesTitle=Liste des trois derniers exercices disponibles
+LblContinue=Continuer
+
+# Dossier Individual Recherch
+#------------------------------------------------------------------
+LblSearchComp=Recherche de société :
+LkBttnSearchComp=Rechercher
+
+
+# Efcao Model Error
+#-------------------------------------------------------------------
+lblErrorTitle=Erreur
+BttnErrorClose=Fermer
+
+# Efcao Model loading
+#-------------------------------------------------------------------
+LblLoadingTitle=Chargement
+
+# Efcao Model Avertissement
+#------------------------------------------------------------------
+lblAvertisTitle=Avertissement
+BttnAvertisClose=Fermer
+
+# Efcao Model Success
+#----------------------------------------------------------------
+LblSuccessTitle=Succès
+BttnSuccessClose=Fermer
+
+
+
+# EFCAO Buttons
+# ---------------------------------
+BttnRetourComp=Sociétés
+BttnGetProdDoc=Obtenir les documents
+BttnSelectAll=Tout sélectionner
+BttnUnSelectAll=Tout désélectionner
+BttnOk=Ok
+BttnAnnuler=Annuler
+BttnDownLoad=Télécharger
+BttnExerciesClose=Fermer
+BttnModeAvance=Mode avancé
+BttnNewSearch=Nouvelle recherche
+
+
+# EFCAO Messges
+# --------------------------------
+MesgEfcao01=Modèles d’exercices pour
+MesgEfcao02=Documents de saisie pour
+MesgEfcao03=Documents d’analyse pour
+MesgEfcao04=La société recherchée n’existe pas.
+MesgEfcao05=Aucun exercice correspondant dans la base de données.
+MesgEfcao06=Le nombre maximum d’exercices à sélectionner est 5.
+MesgEfcao07=La liste des documents de saisie est vide.
+MesgEfcao08=La liste des documents d’analyse est vide.
+MesgEfcao09=Les listes des documents de saisie / analyse sont vides.
+MesgEfcao10=Le Produit 
+MesgEfcao11=a été enregistré. Le document PDF a été créé.
+MesgEfcao12=Un nouveau document PDF a été créé.
+MesgEfcao13=Merci de sélectionner au moins un document.
+MesgEfcao14=Les id du produit et de l’utilisateur sont manquants !
+MesgEfcao15=Attention ! Si vous cliquez sur OK, la commande sera validée et facturée !
+MesgEfcao16=Erreur lors de l’ajout de la consommation !
+MesgEfcao17=XML : Erreur de création de document XML !
+MesgEfcao18=est déjà commandé !
+MesgEfcao19=Le Serveur Ades n’est pas démarré !
+MesgEfcao20=Le service WEB n’est pas connecté !
+MesgEfcao21=Le service WEB n’est pas connecté ! / Impossible de se connecter au serveur distant !
+MesgEfcao22=La date de votre abonnement n’est plus valable !
+MesgEfcao23=Votre abonnement ne possède pas assez de jetons !
+MesgEfcao24=Aucun document de ce produit ne correspond aux modèles de cette société.
+
+# EFCAO Error
+# ------------------------------
+ErrEfcao1=Erreur lors du chargement des exercices : aucun exercice trouvé !  
+ErrEfcao2=Erreur lors du chargement de la liste des modèles d’exercices !
+ErrEfcao3=Erreur lors du chargement des liens !
+ErrEfcao4=Erreur lors du chargement de la liste des produits !
+ErrEfcao5=Erreur lors du chargement des documents du produit de saisie !
+ErrEfcao6=Erreur lors du chargement des documents du produit d’analyse !
+ErrEfcao7=Erreur lors du chargement des documents provenants d’Ades !
+ErrEfcao8=Erreur lors de la recherche de société !
+ErrEfcao9=EDW : Erreur lors du chargement de la liste des documents EDW en provenance d’Ades !
+ErrEfcao10=XML public : Erreur de création du document XML !
+ErrEfcao11=PDF public : Erreur de création du document PDF !
+ErrEfcao12=XML : Erreur de création du document XML !
+ErrEfcao13=PDF : Erreur de création du document PDF !
+ErrEfcao14=Erreur lors l’ajout d’une consommation !
+ErrEfcao15=PDF : Erreur de lecture de la marge de page  !
+ErrEfcao16=PDF : Erreur de lecture de la taille de la page !
+ErrEfcao17=PDF : Erreur de lecture du tableau !
+ErrEfcao18=PDF : Erreur de lecture de l’emplacement du tableau !
+ErrEfcao19=PDF : Erreur de lecture de la taille du tableau !
+ErrEfcao20=PDF : Erreur de lecture de l’espacement intérieur des cellules de la table !
+ErrEfcao21=PDF : Erreur de lecture de la largeur des bordures de cellules !
+ErrEfcao22=PDF : Erreur de lecture de la cellule image !
+ErrEfcao23=PDF : Erreur du lecture de police de charactères !
+ErrEfcao24=PDF : Erreur de lecture de rotation de la fonte !
+ErrEfcao25=PDF : Erreur lors du chargement du logo !
+ErrEfcao26=Erreur lors du chargement des consommations !
+ErrEfcao27=Erreur lors du chargement des propriétés de la société !
+ErrEfcao28=Erreur lors de la vérification de la date de l’abonnement !
+ErrEfcao29=Erreur lors de la vérification des jetons restants !
+
+# EFCAO GridView Company
+# -------------------------------
+GridCompID=Clé Société
+GridCompLock=Type de verrouillage
+GridCompNom=Nom
+GridCompIdentifiant=Identifiant
+GridCompModels=Modèles
+GridCompAction=Action
+
+# EFCAO GridView Exercies
+# -------------------------------
+GridExrciesType=Type
+GridExrciesLock=Verrou
+GridExrciesDate=Date
+GridExrciesUnit=Unité
+GridExrciesCurrency=Devise
+GridExrciesDuration=Durée / Mois
+GridExrciesModels=Modèles
+GridExrciesKey=Clé
+
+# EFCAO GridView document
+# -------------------------------
+GridDocSelect=Sélectionner
+GridDocID=ID
+GridDocName=Nom du document
+GridDocEdw=Edw
+
+
+
+
+#--------------------------------------------------------------------

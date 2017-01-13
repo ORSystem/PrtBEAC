@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CompanyManagement" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8081/CompanyManagement?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8081/CompanyManagement?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:8081/CompanyManagement?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8081/CompanyManagement?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:8081/CompanyManagement?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Anadefi" />
+      <xsd:import schemaLocation="http://localhost:8081/CompanyManagement?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICompanyManagement_CompanySearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearch" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySearch_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySearch_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyKeyFromIdent_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyKeyFromIdent" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyKeyFromIdent_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyKeyFromIdent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyKeyFromIdentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyKeyFromIdent_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQueryStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyQueryStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQueryStatus_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQueryStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyQueryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQueryStatus_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyExtractCSV_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyExtractCSV" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyExtractCSV_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyExtractCSV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyExtractCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyExtractCSV_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyCreate_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyCreate_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyDelete" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyDelete_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyDelete_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetProperties" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetProperties_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetProperties_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetProperties" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetProperties_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetProperties_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetExtra_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetExtra" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetExtra_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetExtra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetExtraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetExtra_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetExtra_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetExtra" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetExtra_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetExtra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetExtraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetExtra_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetIdentifiers_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetIdentifiers" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetIdentifiers_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetIdentifiers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetIdentifiersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetIdentifiers_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetIdentifier_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetIdentifier" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetIdentifier_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetIdentifier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetIdentifierResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetIdentifier_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetRatings_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetRatings" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetRatings_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetRatings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetRatingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetRatings_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetRating" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetRating_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetRating_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetManagers_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetManagers" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetManagers_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetManagers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetManagersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetManagers_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyQuickAddManager" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddManager_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyQuickAddManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddManager_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetManagerProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetManagerProperties" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetManagerProperties_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetManagerProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetManagerPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetManagerProperties_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetManagerProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetManagerProperties" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetManagerProperties_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetManagerProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySetManagerPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanySetManagerProperties_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyDeleteManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyDeleteManager" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyDeleteManager_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyDeleteManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyDeleteManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyDeleteManager_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetStockholders_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetStockholders" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetStockholders_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetStockholders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetStockholdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetStockholders_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddStockholder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyQuickAddStockholder" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddStockholder_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddStockholder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyQuickAddStockholderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddStockholder_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetGroupMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetGroupMembers" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetGroupMembers_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetGroupMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyGetGroupMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyGetGroupMembers_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddGroupMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyQuickAddGroupMember" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddGroupMember_InputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddGroupMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyQuickAddGroupMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompanyManagement_CompanyQuickAddGroupMember_OutputMessage_Headers">
+    <wsdl:part name="AuthHeader" element="AuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="ICompanyManagement">
+    <wsdl:operation name="CompanySearch">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanySearch" message="tns:ICompanyManagement_CompanySearch_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanySearchResponse" message="tns:ICompanyManagement_CompanySearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyKeyFromIdent">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyKeyFromIdent" message="tns:ICompanyManagement_CompanyKeyFromIdent_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyKeyFromIdentResponse" message="tns:ICompanyManagement_CompanyKeyFromIdent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyQueryStatus">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyQueryStatus" message="tns:ICompanyManagement_CompanyQueryStatus_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyQueryStatusResponse" message="tns:ICompanyManagement_CompanyQueryStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyExtractCSV">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyExtractCSV" message="tns:ICompanyManagement_CompanyExtractCSV_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyExtractCSVResponse" message="tns:ICompanyManagement_CompanyExtractCSV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyCreate">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyCreate" message="tns:ICompanyManagement_CompanyCreate_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyCreateResponse" message="tns:ICompanyManagement_CompanyCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDelete">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyDelete" message="tns:ICompanyManagement_CompanyDelete_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyDeleteResponse" message="tns:ICompanyManagement_CompanyDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetProperties">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetProperties" message="tns:ICompanyManagement_CompanyGetProperties_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetPropertiesResponse" message="tns:ICompanyManagement_CompanyGetProperties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetProperties">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetProperties" message="tns:ICompanyManagement_CompanySetProperties_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetPropertiesResponse" message="tns:ICompanyManagement_CompanySetProperties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetExtra">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetExtra" message="tns:ICompanyManagement_CompanyGetExtra_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetExtraResponse" message="tns:ICompanyManagement_CompanyGetExtra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetExtra">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetExtra" message="tns:ICompanyManagement_CompanySetExtra_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetExtraResponse" message="tns:ICompanyManagement_CompanySetExtra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetIdentifiers">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetIdentifiers" message="tns:ICompanyManagement_CompanyGetIdentifiers_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetIdentifiersResponse" message="tns:ICompanyManagement_CompanyGetIdentifiers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetIdentifier">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetIdentifier" message="tns:ICompanyManagement_CompanySetIdentifier_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetIdentifierResponse" message="tns:ICompanyManagement_CompanySetIdentifier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetRatings">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetRatings" message="tns:ICompanyManagement_CompanyGetRatings_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetRatingsResponse" message="tns:ICompanyManagement_CompanyGetRatings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetRating">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetRating" message="tns:ICompanyManagement_CompanySetRating_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetRatingResponse" message="tns:ICompanyManagement_CompanySetRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetManagers">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetManagers" message="tns:ICompanyManagement_CompanyGetManagers_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetManagersResponse" message="tns:ICompanyManagement_CompanyGetManagers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyQuickAddManager">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyQuickAddManager" message="tns:ICompanyManagement_CompanyQuickAddManager_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyQuickAddManagerResponse" message="tns:ICompanyManagement_CompanyQuickAddManager_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetManagerProperties">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetManagerProperties" message="tns:ICompanyManagement_CompanyGetManagerProperties_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetManagerPropertiesResponse" message="tns:ICompanyManagement_CompanyGetManagerProperties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetManagerProperties">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetManagerProperties" message="tns:ICompanyManagement_CompanySetManagerProperties_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanySetManagerPropertiesResponse" message="tns:ICompanyManagement_CompanySetManagerProperties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDeleteManager">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyDeleteManager" message="tns:ICompanyManagement_CompanyDeleteManager_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyDeleteManagerResponse" message="tns:ICompanyManagement_CompanyDeleteManager_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetStockholders">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetStockholders" message="tns:ICompanyManagement_CompanyGetStockholders_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetStockholdersResponse" message="tns:ICompanyManagement_CompanyGetStockholders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyQuickAddStockholder">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyQuickAddStockholder" message="tns:ICompanyManagement_CompanyQuickAddStockholder_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyQuickAddStockholderResponse" message="tns:ICompanyManagement_CompanyQuickAddStockholder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetGroupMembers">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetGroupMembers" message="tns:ICompanyManagement_CompanyGetGroupMembers_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyGetGroupMembersResponse" message="tns:ICompanyManagement_CompanyGetGroupMembers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyQuickAddGroupMember">
+      <wsdl:input wsam:Action="http://tempuri.org/ICompanyManagement/CompanyQuickAddGroupMember" message="tns:ICompanyManagement_CompanyQuickAddGroupMember_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/ICompanyManagement/CompanyQuickAddGroupMemberResponse" message="tns:ICompanyManagement_CompanyQuickAddGroupMember_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICompanyManagement" type="tns:ICompanyManagement">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CompanySearch">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanySearch" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanySearch_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanySearch_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyKeyFromIdent">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyKeyFromIdent" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyKeyFromIdent_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyKeyFromIdent_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyQueryStatus">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyQueryStatus" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyQueryStatus_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyQueryStatus_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyExtractCSV">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyExtractCSV" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyExtractCSV_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyExtractCSV_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyCreate">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyCreate" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyCreate_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyCreate_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDelete">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyDelete" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyDelete_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyDelete_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetProperties">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyGetProperties" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyGetProperties_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyGetProperties_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetProperties">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanySetProperties" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanySetProperties_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanySetProperties_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetExtra">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyGetExtra" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyGetExtra_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyGetExtra_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetExtra">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanySetExtra" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanySetExtra_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanySetExtra_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetIdentifiers">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyGetIdentifiers" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyGetIdentifiers_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyGetIdentifiers_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetIdentifier">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanySetIdentifier" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanySetIdentifier_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanySetIdentifier_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetRatings">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyGetRatings" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyGetRatings_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyGetRatings_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetRating">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanySetRating" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanySetRating_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanySetRating_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetManagers">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyGetManagers" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyGetManagers_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyGetManagers_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyQuickAddManager">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyQuickAddManager" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyQuickAddManager_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyQuickAddManager_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetManagerProperties">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyGetManagerProperties" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyGetManagerProperties_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyGetManagerProperties_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySetManagerProperties">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanySetManagerProperties" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanySetManagerProperties_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanySetManagerProperties_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDeleteManager">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyDeleteManager" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyDeleteManager_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyDeleteManager_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetStockholders">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyGetStockholders" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyGetStockholders_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyGetStockholders_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyQuickAddStockholder">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyQuickAddStockholder" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyQuickAddStockholder_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyQuickAddStockholder_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyGetGroupMembers">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyGetGroupMembers" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyGetGroupMembers_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyGetGroupMembers_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyQuickAddGroupMember">
+      <soap:operation soapAction="http://tempuri.org/ICompanyManagement/CompanyQuickAddGroupMember" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:ICompanyManagement_CompanyQuickAddGroupMember_InputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:ICompanyManagement_CompanyQuickAddGroupMember_OutputMessage_Headers" part="AuthHeader" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CompanyManagement">
+    <wsdl:port name="BasicHttpBinding_ICompanyManagement" binding="tns:BasicHttpBinding_ICompanyManagement">
+      <soap:address location="http://localhost:8081/CompanyManagement" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
