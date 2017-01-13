@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Orsystem")]
 [assembly: AssemblyProduct("EFCAO")]
-[assembly: AssemblyCopyright("Copyright © Orsytem")]
+[assembly: AssemblyCopyright("Copyright © ORSytem")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
